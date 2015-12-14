@@ -4,8 +4,7 @@ angular.module('pressreader', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize'
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'app/main/main.html'
       })
       .otherwise({
         redirectTo: '/'
