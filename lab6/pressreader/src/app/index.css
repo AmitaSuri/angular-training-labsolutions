@@ -1,0 +1,108 @@
+.readmore {
+  cursor: pointer;
+  color: blue;
+}
+
+pr-side-nav, .site-sidenav {
+  background: #3F51B5;
+}
+
+.site-sidenav md-content {
+  background: transparent;
+}
+
+.docs-menu > li {
+  border-bottom: 1px solid #6674C4;
+}
+
+.docs-logo {
+  text-align: center;
+  display: flex;
+  display:-webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items:center; 
+  padding: 0 0 16px;
+}
+.docs-logo:focus {
+  outline: none;
+}
+.docs-logo > img {
+  height: 150px;
+  width: auto;
+  display: block;
+}
+
+.docs-logotype {
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 26px;
+  text-decoration: none;
+}
+
+pr-side-nav a {
+  color: #4054B2;
+  text-decoration: none;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(64, 84, 178, 0.25);
+  -webkit-transition: border-bottom 0.35s;
+  -moz-transition: border-bottom 0.35s;
+  -ms-transition: border-bottom 0.35s;
+  -o-transition: border-bottom 0.35s;
+  transition: border-bottom 0.35s;
+}
+
+.docs-menu,
+.docs-menu ul {
+  list-style: none;
+  padding: 0;
+}
+.docs-menu li {
+  margin: 0;
+}
+.docs-menu > li {
+  border-bottom: 1px solid #6674C4;
+}
+.docs-menu .md-button {
+  border-radius: 0;
+  color: white;
+  cursor: pointer;
+  display: block;
+  line-height: 40px;
+  margin: 0;
+  max-height: 40px;
+  overflow: hidden;
+  padding: 0px 16px;
+  text-align: left;
+  text-decoration: none;
+  white-space: normal;
+  width: 100%;
+}
+.docs-menu .md-button:hover,
+.docs-menu .md-button:focus {
+  background: #6070C7 !important;
+}
+.docs-menu .md-button md-icon {
+  color: white;
+}
+
+.menu-toggle-list {
+  max-height: 2000px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+  -webkit-transition-property: max-height;
+  -moz-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+  -moz-transition-property: max-height;
+  transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+  transition-property: max-height;
+}
+.docs-menu .menu-toggle-list .md-button {
+  display: block;
+  font-weight: 100;
+  padding: 0 16px 0 32px;
+  text-transform: none;
+}

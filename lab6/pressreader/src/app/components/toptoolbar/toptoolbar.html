@@ -1,0 +1,23 @@
+<md-toolbar>
+	<div>
+		<md-select style="float:left;" ng-model="themeModel" placeholder="Switch Theme To">
+		  <md-option ng-value="opt.name" ng-repeat="opt in [
+							{name: 'default', desc: 'Default'}, 
+							{name: 'pink', desc: 'Pink'}
+						]">{{ opt.desc }}</md-option>
+		</md-select>
+
+		<md-select style="float:left;"  ng-model="langModel" placeholder="Switch Language To">
+		  <md-option ng-value="opt.name" ng-repeat="opt in [
+							{name: 'en', desc: 'English'}, 
+							{name: 'hi', desc: 'Hindi'}
+						]">{{ opt.desc }}</md-option>
+		</md-select>
+		<md-button style="float:left;" class="md-fab" aria-label="Show Settings">
+			<md-icon md-svg-icon="assets/images/ic_settings_48px.svg"></md-icon>
+			<md-tooltip>
+	          Settings
+	        </md-tooltip>
+		</md-button>
+	</div>
+</md-toolbar>
