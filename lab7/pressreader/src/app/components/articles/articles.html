@@ -1,0 +1,53 @@
+<md-tabs md-dynamic-height md-stretch-tabs md-selected="selectedIndex">
+	<md-tab label disabled md-on-select md-on-deselect>
+	  <md-tab-label>
+	    <h3>All Articles</h3>
+	  </md-tab-label>
+	  <md-tab-body>
+
+	  	<div layout="row" layout-align="end center">
+			<md-select ng-model="viewModel" placeholder="Switch View To">
+			  <md-option ng-value="opt.name" ng-repeat="opt in [
+							{name: 'list', desc: 'List View'}, 
+							{name: 'card', desc: 'Card View'}
+						]">{{ opt.desc }}</md-option>
+			</md-select>
+		</div>
+
+		<!-- list view -->
+		<!-- <md-list>
+		  <md-list-item class="md-3-line" ng-repeat="post in [{date:'2013-12-04 04:40:59', author: {id: 6, slug: 'branjit', name: 'branjit', first_name: 'Ranjit', last_name: 'Battewad',nickname: 'branjit'}, title: 'Using Webfont icons in Sencha Touch', excerpt: '<p>Introduction Need of custom icons i.e. business specific in any application is common. By default Sencha Touch comes with Pictos web font icons, but different application needs different icons and all of them may not have available in default Pictos which comes with Sencha Touch. To use custom icons i.e. application specific needs like e-commerce [&hellip;]</p>'}, {date:'2013-11-15 21:47:29', author: {id: 6, slug: 'wtcalok', name: 'wtcalok', first_name: 'Alok Ranjan', last_name: '',nickname: 'wtcalok'}, title: 'Sencha Touch Cookbook &#8211; 2nd edition', excerpt: '<p>Overview Ajit Kumar (CTO, Walking Tree) is a very good friend of mine and we co-founded Walking Tree in 2008. It is my pleasure to be reviewing his fourth book, &#8220;Sencha Touch Cookbook, Second Edition&#8221;. I must say that previous three books &#8220;ADempiere 3.6 Cookbook&#8220;, &#8220;Sencha Touch Cookbook&#8220;, &#8220;Sencha MVC Architecture&#8221; have been of great [&hellip;]</p>'}, {date:'2013-11-09 08:35:28', author: {id: 6, slug: 'wtcalok', name: 'wtcalok', first_name: 'Alok Ranjan', last_name: '',nickname: 'wtcalok'}, title: 'What can I do with a GridPanel in ExtJS', excerpt: '<p>Problem Statement I have to develop a lot of applications in my web app and I see that grid component of ExtJS may fit in. However, I am not aware of what all things I can do with the &#8211; off the shelf available framework pieces &#8211; available plug-ins in the marketplace and &#8211; custom [&hellip;]</p>'}]">
+		    <div class="md-list-item-text">
+		      <h2 ng-bind-html="post.title"></h2>
+		      <span>Published On: <a class="plain">{{post.date | strdate | date:'d MMM yyyy'}}</a>&nbsp;&nbsp;Author: <a class="plain">{{post.author.first_name}}&nbsp;{{post.author.last_name}}</a></span>
+		      <p ng-bind-html="post.excerpt | readmore"></p>
+		    </div>
+		  <md-divider></md-divider>
+		  </md-list-item>
+		</md-list> -->
+
+
+		<!-- card view -->
+		<div layout>
+			<md-card flex ng-repeat="post in [{date:'2013-12-04 04:40:59', author: {id: 6, slug: 'branjit', name: 'branjit', first_name: 'Ranjit', last_name: 'Battewad',nickname: 'branjit'}, title: 'Using Webfont icons in Sencha Touch', excerpt: '<p>Introduction Need of custom icons i.e. business specific in any application is common. By default Sencha Touch comes with Pictos web font icons, but different application needs different icons and all of them may not have available in default Pictos which comes with Sencha Touch. To use custom icons i.e. application specific needs like e-commerce [&hellip;]</p>'}, {date:'2013-11-15 21:47:29', author: {id: 6, slug: 'wtcalok', name: 'wtcalok', first_name: 'Alok Ranjan', last_name: '',nickname: 'wtcalok'}, title: 'Sencha Touch Cookbook &#8211; 2nd edition', excerpt: '<p>Overview Ajit Kumar (CTO, Walking Tree) is a very good friend of mine and we co-founded Walking Tree in 2008. It is my pleasure to be reviewing his fourth book, &#8220;Sencha Touch Cookbook, Second Edition&#8221;. I must say that previous three books &#8220;ADempiere 3.6 Cookbook&#8220;, &#8220;Sencha Touch Cookbook&#8220;, &#8220;Sencha MVC Architecture&#8221; have been of great [&hellip;]</p>'}, {date:'2013-11-09 08:35:28', author: {id: 6, slug: 'wtcalok', name: 'wtcalok', first_name: 'Alok Ranjan', last_name: '',nickname: 'wtcalok'}, title: 'What can I do with a GridPanel in ExtJS', excerpt: '<p>Problem Statement I have to develop a lot of applications in my web app and I see that grid component of ExtJS may fit in. However, I am not aware of what all things I can do with the &#8211; off the shelf available framework pieces &#8211; available plug-ins in the marketplace and &#8211; custom [&hellip;]</p>'}]">
+			    <md-card-header>
+			      <md-card-header-text>
+			        <span class="md-title">{{post.author.first_name}}&nbsp;{{post.author.last_name}}</span>
+			        <span class="md-subhead">{{post.date | strdate | date:'d MMM yyyy'}}</span>
+			      </md-card-header-text>
+			    </md-card-header>
+				<md-card-title>
+				  <md-card-title-text>
+				    <span class="md-headline">{{post.title}}</span>
+				  </md-card-title-text>
+				</md-card-title>
+				<md-card-content ng-bind-html="post.excerpt | hellip2ellipsis">
+				</md-card-content>
+				<md-card-actions layout="row" layout-align="end center">
+			      <md-button>Read More</md-button>
+			    </md-card-actions>
+			</md-card>
+		</div>
+	</md-tab-body>
+	</md-tab>
+</md-tabs>	
