@@ -1,3 +1,9 @@
+body {
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .readmore {
   cursor: pointer;
   color: blue;
@@ -5,6 +11,12 @@
 
 pr-side-nav, .site-sidenav {
   background: #3F51B5;
+}
+
+pr-side-nav, md-sidenav {
+  width: 272px;
+  min-width: 272px;
+  max-width: 272px;
 }
 
 .site-sidenav md-content {
@@ -73,7 +85,7 @@ pr-side-nav a {
   line-height: 40px;
   margin: 0;
   max-height: 40px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   padding: 0px 16px;
   text-align: left;
   text-decoration: none;
@@ -90,7 +102,7 @@ pr-side-nav a {
 
 .menu-toggle-list {
   max-height: 2000px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   position: relative;
   z-index: 1;
   -webkit-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
