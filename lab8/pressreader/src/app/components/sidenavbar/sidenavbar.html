@@ -1,0 +1,22 @@
+<md-sidenav class="site-sidenav" md-is-locked-open="true">
+
+    <header class="nav-header">
+      <a ng-href="#/" class="docs-logo" href="#/">
+        <img src="assets/images/PressReader.svg">
+        <h1 class="docs-logotype md-heading">WordPress Reader</h1>
+      </a>
+    </header>
+
+    <md-content role="navigation" class="md-default-theme" md-scroll-y flex layout-padding>
+    	<ul class="docs-menu">
+    		<li>
+    			<md-button ng-click="getPostsByCategory({title: 'All Articles'})">All Articles</md-button>
+    		</li>
+    		<li ng-repeat="category in categories" ng-click="getPostsByCategory(category)">
+    			<pr-category></pr-category>
+    			<pr-category-items></pr-category-items>
+    		</li>
+    	</ul>
+	</md-content>
+
+</md-sidenav>

@@ -1,0 +1,22 @@
+<md-toolbar layout="row">
+	<span flex=""></span>
+	<md-select ng-model="themeModel" placeholder="Switch Theme To">
+	  <md-option ng-value="opt.name" ng-repeat="opt in [
+						{name: 'default', desc: 'Default'}, 
+						{name: 'pink', desc: 'Pink'}
+					]" ng-click="switchThemeTo(opt)">{{ opt.desc }}</md-option>
+	</md-select>
+
+	<md-select ng-model="langModel" placeholder="Switch Language To">
+	  <md-option ng-value="opt.name" ng-repeat="opt in [
+						{name: 'en', desc: 'English'}, 
+						{name: 'hi', desc: 'Hindi'}
+					]" ng-click="switchLangTo(opt)">{{ opt.desc }}</md-option>
+	</md-select>
+	<md-button class="md-fab" aria-label="Show Settings" ng-click="showSettings()">
+		<md-icon md-svg-icon="assets/images/ic_settings_48px.svg"></md-icon>
+		<md-tooltip>
+          Settings
+        </md-tooltip>
+	</md-button>
+</md-toolbar>
