@@ -1,0 +1,5 @@
+<ul ng-if="category.opened===true" class="menu-toggle-list">
+	<li ng-repeat="post in category.posts">
+		<md-button ng-bind-html="post.title" aria-label="{{post.title}}"></md-button>
+	</li>
+</ul>

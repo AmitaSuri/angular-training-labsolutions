@@ -1,0 +1,18 @@
+<div layout>
+	<h1 ng-bind-html="item.title"></h1>
+	<span flex></span>
+	<md-button class="md-fab" aria-label="Open Original Post" ng-click="openOriginalPost()">
+        <md-icon md-svg-icon="assets/images/ic_open_in_new_48px.svg"></md-icon>
+		<md-tooltip>
+          Open original post
+        </md-tooltip>
+      </md-button>
+	<md-button class="md-fab md-primary" ng-click="removePostTab()">
+		<md-icon md-svg-icon="assets/images/close15.svg"></md-icon>
+		<md-tooltip>
+          Close Tab
+        </md-tooltip>
+	</md-button>
+</div>
+
+<p ng-bind-html="item.content"></p>
