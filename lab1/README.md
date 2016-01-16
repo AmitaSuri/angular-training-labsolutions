@@ -61,4 +61,4 @@ Build and optimize the current project, ready for deployment. This includes lint
 
 # License
 
-This project is available under the [MIT License](https://github.com/walkingtree/WizarDroid.Net/blob/master/license).
+Copyright(c) [Walking Tree](http://walkingtree.in)
